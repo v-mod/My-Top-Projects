@@ -1,0 +1,15 @@
+playsound
+wikipedia
+wolframalpha
+pytesseract
+Pillow
+datetime
+wheel
+ecapture
+requests
+pynput
+pyjokes
+flask
+PyAudio
+speechrecognition
+pyttsx3
