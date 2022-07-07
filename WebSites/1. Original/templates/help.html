@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <html lang = "en">
+    <link rel="shortcut icon" href="{{ url_for('static', filename= 'favicon.png')}}" />
+    <title>Help|PiDev</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head><body>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><u>Help</u></li>
+            {% if 'UserId' in session %} 
+            <li><a href="/downloads/pios">Download Pios</a></li>
+            <li><a href="/profile/me">Me</a></li>
+            <li><a href="/access_clip">Access a clip</a></li>
+            <li><a href="/auth/logout">Logout</a></li>
+            {% else %}
+            <li><a href="/auth/login">Login</a></li>
+            {% endif %}
+          </ul>
+        </nav>
+    </header>
+    <h4>Welocome to the PiDev Help page.</h4><p>
+    <h3> 1 - Logging in</h3><p>
+    In order to login please go to the hompage and click 'Login'. Use you assigned login details to login.<p>
+    <h3 >2 - Downloading Pios</h3><p>
+    PLease insert the User-Data and Pios-Tutorials foldre onto a server. The open the files and set the path to the specific areas.<p>
+</body>

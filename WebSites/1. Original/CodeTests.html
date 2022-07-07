@@ -1,0 +1,39 @@
+<header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/help">Help</a></li>
+        {% if 'UserId' in session %} 
+        <li><a href="/downloads/pios">Download Pios</a></li>
+        <li><a href="/profile/me">Me</a></li>
+        <li><a href="/auth/logout">Logout</a></li>
+        {% else %}
+        <li><a href="/auth/login">Login</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+</header>
+
+  <div class = "but1">
+    <button onclick='
+   window.location.replace("/")
+   '><u>Home</u></button>
+    <button onclick='
+    window.location.replace("/help")
+    '>Help</button>
+   {% if 'UserId' in session %}  
+       <button onclick='
+       window.location.replace("/downloads/pios")
+       '>Download Pios</button>
+       <button onclick='
+       window.location.replace("/profile/me")
+       '>Me</button>
+       <button onclick='
+       window.location.replace("/auth/logout")
+       '>Logout</button>        
+   {% else %}
+       <button onclick='
+       window.location.replace("/auth/login")
+       '>Login</button> 
+   {% endif %}    
+    </div>

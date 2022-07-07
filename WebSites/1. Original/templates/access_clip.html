@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <html lang = "en">
+    <link rel="shortcut icon" href="{{ url_for('static', filename= 'favicon.png')}}" />
+    <title>Access a clip |PiDev</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head><body>   
+    <header>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/help">Help</a></li>
+            {% if 'UserId' in session %} 
+            <li><a href="/downloads/pios">Download Pios</a></li>
+            <li><u>Access a clip</u></li>
+            <li><a href="/profile/me">Me</a></li>
+            <li><a href="/auth/logout">Logout</a></li>
+            {% else %}
+            <li><a href="/auth/login">Login</a></li>
+            {% endif %}
+          </ul>
+        </nav>
+    </header>
+    Clip Name:    <input name='clipId' id='clipId' type='text' placeholder="Clip name...">
+    <button onclick='
+    var id = document.getElementById("clipId").value
+	window.location.replace("/clip/" + id)
+     '>Go</button>
