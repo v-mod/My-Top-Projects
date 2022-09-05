@@ -1,5 +1,4 @@
-# Vex Yr7
+# My top projects
 ## Overview
-This repo contains all of the projects i would like to submit for vex which showcase my programming skills. 
-## Notes
-I would like to mention that I also took part in the Raspberry Pi PA Compettion. This adds on the my STEM skils.
+This repo contains the rest of my projects of which the top 4 are on the home. 
+
